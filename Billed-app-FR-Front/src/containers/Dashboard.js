@@ -144,8 +144,9 @@ export default class {
     })
 
     return bills*/
-        //Je peux désormais déplier plusieurs listes, et consulter les tickets de chacune des trois listes.
 
+        //Je peux désormais déplier plusieurs listes, et consulter les tickets de chacune des trois listes.
+        // ça prenais en compte que la derniere liste ouverte
         bills.forEach((bill) => {
             $(`#open-bill${bill.id}`).click((e) => {
                 if (e.target.closest(`#status-bills-container${index}`)) {
