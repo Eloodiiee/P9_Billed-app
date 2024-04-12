@@ -115,12 +115,6 @@ describe("Given that I am a user on login page", () => {
             expect(screen.getAllByText("Mes notes de frais")).toBeTruthy()
         })
     })
-
-    ///////////////// Ce test doit vérifier qu'un nouvel utilisateur est créé ////////////////
-
-    describe("When I do fill fields in a correct format with an unknown user and I click on employee button Login In", () => {
-        test("Then it should create a new user and I should be identified as an Employee in app", () => {})
-    })
 })
 
 describe("Given that I am a user on login page", () => {
