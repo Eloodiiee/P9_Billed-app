@@ -125,7 +125,6 @@ describe("Given I am connected as an employee", () => {
             type: "text/plain",
         })
         const handleChangeFile = jest.fn((e) => newBillInit.handleChangeFile(e))
-        //const formNewBill = screen.getByTestId("form-new-bill")/*Déclarée mais jamais lue*/
         const billFile = screen.getByTestId("file")
 
         billFile.addEventListener("change", handleChangeFile)
