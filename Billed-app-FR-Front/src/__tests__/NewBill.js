@@ -48,7 +48,7 @@ describe("Given I am connected as an employee", () => {
             expect(handleSubmit).toHaveBeenCalled()
         })
     })
-    /*Ce cas de test vérifie la capacité d'un employé à télécharger une image pour une nouvelle note de frais.*/
+    /*Ce cas de test vérifie la capacité d'un employé à télécharger une image au bon format pour une nouvelle note de frais.*/
     test("Then verify the picture of the bill", async () => {
         jest.spyOn(mockStore, "bills")
 
@@ -86,7 +86,7 @@ describe("Given I am connected as an employee", () => {
 
         expect(billFile.files[0].name).toBeDefined()
         expect(handleChangeFile).toBeCalled()
-
+        //La soumission du formulaire est simulée, et son succès est confirmé en vérifiant que la fonction 'handleSubmit' a été appelée.
         const handleSubmit = jest.fn((e) => newBillInit.handleSubmit(e))
         formNewBill.addEventListener("submit", handleSubmit)
         fireEvent.submit(formNewBill)
@@ -124,6 +124,7 @@ describe("Given I am connected as an employee", () => {
         const file = new File(["unsupported"], "unsupported.txt", {
             type: "text/plain",
         })
+        //  Il est vérifié que le message de validation correct est affiché, confirmant que l'application a correctement rejeté le fichier non supporté.
         const handleChangeFile = jest.fn((e) => newBillInit.handleChangeFile(e))
         const billFile = screen.getByTestId("file")
 
