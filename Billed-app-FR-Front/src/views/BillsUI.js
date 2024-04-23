@@ -22,7 +22,7 @@ const row = (bill) => {
 const rows = (data) => {
     let dateSort = data && data.length ? data.sort((a, b) => (a.date < b.date ? 1 : -1)) : data
     return dateSort && dateSort.length ? dateSort.map((bill) => row(bill)).join("") : ""
-}
+} // Les Bills sont triés par dates decroissante
 
 export default ({ data: bills, loading, error }) => {
     const modal = () => `
